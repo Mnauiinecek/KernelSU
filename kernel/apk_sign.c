@@ -361,11 +361,11 @@ bool is_manager_apk(char *path)
     }
 #endif
     return (check_v2_signature(path, EXPECTED_SIZE, EXPECTED_HASH)
-        || check_v2_signature(path, 0x2e8, "64d0472345616035cff659563d354f850c33cc67109b678c05b70d768063299c") // ReSukiSU Fork
+        || check_v2_signature(path, 0x2e8, "aca25a834f0b3428595316fd4b1906dff2197cc286cb8763bd4c53b040a1ed6f") // ReSukiSU Fork
         );
 #ifdef EXPECTED_SIZE2
     return (check_v2_signature(path, EXPECTED_SIZE2, EXPECTED_HASH2)
-        || check_v2_signature(path, 0x2e8, "64d0472345616035cff659563d354f850c33cc67109b678c05b70d768063299c") // ReSukiSU Fork
+        || check_v2_signature(path, 0x2e8, "aca25a834f0b3428595316fd4b1906dff2197cc286cb8763bd4c53b040a1ed6f") // ReSukiSU Fork
         );
 #else
     return false;
