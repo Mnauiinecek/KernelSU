@@ -361,17 +361,11 @@ bool is_manager_apk(char *path)
     }
 #endif
     return (check_v2_signature(path, EXPECTED_SIZE, EXPECTED_HASH)
-        || check_v2_signature(path, 0x2e8, "3f9571aa8ce47b6fcdc9285369e2689341303f0b339a13d247ec4991b1513b51") // ReSukiSU Fork
-        || check_v2_signature(path, 0x2e8, "f5fdd1aca1e7b1462d7e862c2506d6a81edc0cb158505bca76f6d65efb027b55") // ReSukiSU Fork Spoofed
-        || check_v2_signature(path, 0x2e8, "63783711149e1ea67578a72aee04e14f0d90eabf0deea3f04dbf12af46529190") // KernelSU-Next
-        || check_v2_signature(path, 0x2e8, "8c636c1df3babea88cb5eadd0f4ad276ea2f2bc47e9b4076a49f9e24cc00d407") // KernelSU-Next Spoofed
+        || check_v2_signature(path, 0x370, "b3ecd1c67ac1e85ea322ea63f5acd6cd62ce32af719d7a81d8f460306d379b94") // My KernelSU-Next and ReSukiSU
         );
 #ifdef EXPECTED_SIZE2
     return (check_v2_signature(path, EXPECTED_SIZE2, EXPECTED_HASH2)
-        || check_v2_signature(path, 0x2e8, "3f9571aa8ce47b6fcdc9285369e2689341303f0b339a13d247ec4991b1513b51") // ReSukiSU Fork
-        || check_v2_signature(path, 0x2e8, "f5fdd1aca1e7b1462d7e862c2506d6a81edc0cb158505bca76f6d65efb027b55") // ReSukiSU Fork Spoofed
-        || check_v2_signature(path, 0x2e8, "63783711149e1ea67578a72aee04e14f0d90eabf0deea3f04dbf12af46529190") // KernelSU-Next
-        || check_v2_signature(path, 0x2e8, "8c636c1df3babea88cb5eadd0f4ad276ea2f2bc47e9b4076a49f9e24cc00d407") // KernelSU-Next Spoofed
+        || check_v2_signature(path, 0x370, "b3ecd1c67ac1e85ea322ea63f5acd6cd62ce32af719d7a81d8f460306d379b94") // My KernelSU-Next and ReSukiSU
         );
 #else
     return false;
